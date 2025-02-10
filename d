@@ -252,7 +252,7 @@ def updateData():
             if device == data['Device']:
                 version = data['Version']
                 setting = data['Settings']
-                with open('config.json', 'r') as f:
+                with open(CONFIG_FILE, 'r') as f:
                     config = json.load(f)
                 if setting:
                     scripts, placeid, psserver = load_setting(setting)
@@ -271,7 +271,7 @@ def updateData():
                         printText('Dont Have Packages Roblox', 'fail')
                             
                     downloadRoblox(True)
-                    with open('config.json', 'w') as f:
+                    with open(CONFIG_FILE, 'w') as f:
                         f.write(data_sheet)
 
 
@@ -835,7 +835,7 @@ if __name__ == "__main__":
                         webhook = data['Webhook']
                         count_tabs = data['Tabs']
                         listFarm = data['List Farm'].split(", ")
-                        with open('config.json', 'w') as f:
+                        with open(CONFIG_FILE, 'w') as f:
                             f.write(data)
 
                         packages = getPackageRoblox()
