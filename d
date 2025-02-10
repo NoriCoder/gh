@@ -248,7 +248,6 @@ def updateData():
     while True:
         data_sheet = read_sheet()
         for data in data_sheet:
-            data = data.strip()
             if device == data['Device']:
                 version = data['Version']
                 setting = data['Settings']
@@ -271,9 +270,8 @@ def updateData():
                         printText('Dont Have Packages Roblox', 'fail')
                             
                     downloadRoblox(True)
-                    with open(CONFIG_FILE, 'w') as f:
-                        f.write(data_sheet)
-
+                    with open(CONFIG_FILE, 'w', encoding="utf-8") as f:
+                        f.write(json.dumps(data, ensure_ascii=False))
 
 def main(setting):
     if setting:
@@ -835,8 +833,8 @@ if __name__ == "__main__":
                         webhook = data['Webhook']
                         count_tabs = data['Tabs']
                         listFarm = data['List Farm'].split(", ")
-                        with open(CONFIG_FILE, 'w') as f:
-                            f.write(data)
+                        with open(CONFIG_FILE, 'w', encoding="utf-8") as f:
+                            f.write(json.dumps(data, ensure_ascii=False))
 
                         packages = getPackageRoblox()
                         if not packages or len(packages) < count_tabs:
