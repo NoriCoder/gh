@@ -829,7 +829,6 @@ if __name__ == "__main__":
                 #python main.py UVIP13
                 data_sheet = read_sheet()
                 for data in data_sheet:
-                    data = data.strip()
                     if device == data['Device']:
                         version = data['Version']
                         setting = data['Settings']
