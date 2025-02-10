@@ -799,7 +799,7 @@ def printText(text, type):
         print(f'{Fore.RESET}[{Fore.CYAN}{current_time()}{Fore.RESET}] {Fore.RED} {text} {Fore.RESET}')
 
 def read_sheet():
-    service_account_file = r"C:\Users\Admin\Downloads\ugphone-449406-fa81f6ae014c.json"
+    service_account_file = os.path.join(SCRIPT_DIR, 'ugphone.json')
     gc = gspread.service_account(filename=service_account_file)
 
     spreadsheet_id = "1Bzux-ufKj4n0jAwhubTf-vQLdbN7xNFesfpY5FnXVko"
