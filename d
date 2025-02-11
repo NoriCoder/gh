@@ -845,15 +845,15 @@ if __name__ == "__main__":
 
                         flask_process = multiprocessing.Process(target=localhost)
                         relaunch_process = multiprocessing.Process(target=main, args=setting)
-                        update_process = multiprocessing.Process(target=updateData)
+                        #update_process = multiprocessing.Process(target=updateData)
 
                         flask_process.start()
                         relaunch_process.start()
-                        update_process.start()
+                        #update_process.start()
                         
                         flask_process.join()
                         relaunch_process.join()
-                        update_process.join()
+                        #update_process.join()
             else:
                 #setup lại nếu cần thiết
                 print(f'{Fore.RED}Input Name Device {Fore.RESET}')
