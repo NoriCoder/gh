@@ -24,8 +24,8 @@ _G.Settings = {
 	},
 	TextLabels = {
 		LowerQuality = true,
-		Invisible = true,
-		Destroy = true
+		Invisible = false,
+		Destroy = false
 	},
 	MeshParts = {
 		LowerQuality = true,
@@ -35,7 +35,6 @@ _G.Settings = {
 		Destroy = true
 	},
 	Other = {
-		["FPS Cap"] = 240,
 		["No Camera Effects"] = true,
 		["No Clothes"] = true,
 		["Low Water Graphics"] = true,
