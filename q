@@ -25,14 +25,14 @@ task.spawn(function()
         },
         TextLabels = {
             LowerQuality = true,
-            Invisible = false,
+            Invisible = true,
             Destroy = false
         },
         MeshParts = {
-            LowerQuality = true,
-            Invisible = true,
-            NoTexture = true,
-            NoMesh = true,
+            LowerQuality = false,
+            Invisible = false,
+            NoTexture = false,
+            NoMesh = false,
             Destroy = false
         },
         Other = {
