@@ -42,14 +42,11 @@ task.spawn(function()
             ["No Shadows"] = true,
             ["Low Rendering"] = true,
             ["Low Quality Parts"] = true,
-            ["Low Quality Models"] = true,
+            ["Low Quality Models"] = false,
             ["Reset Materials"] = true,
             ["Lower Quality MeshParts"] = true
         }
     }
-
-    warn = function(...)
-    end
     
     if not _G.Ignore then
         _G.Ignore = {} -- Add Instances to this table to ignore them (e.g. _G.Ignore = {workspace.Map, workspace.Map2})
