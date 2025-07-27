@@ -40,11 +40,11 @@ task.spawn(function()
             ["No Clothes"] = true,
             ["Low Water Graphics"] = true,
             ["No Shadows"] = true,
-            ["Low Rendering"] = true,
-            ["Low Quality Parts"] = true,
+            ["Low Rendering"] = false,
+            ["Low Quality Parts"] = false,
             ["Low Quality Models"] = false,
             ["Reset Materials"] = true,
-            ["Lower Quality MeshParts"] = true
+            ["Lower Quality MeshParts"] = false
         }
     }
     
